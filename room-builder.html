@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Room builder | RFDM Marketplace</title>
+<meta name="description" content="Room builder from Makerman Services. Coming soon.">
+<link rel="canonical" href="https://makerman-services.github.io/rfdm-marketplace-site/room-builder">
+<meta property="og:url" content="https://makerman-services.github.io/rfdm-marketplace-site/room-builder">
+<link rel="preload" href="fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="./" aria-label="RFDM Marketplace home"><span class="dot" aria-hidden="true"></span>RFDM <span class="light">Marketplace</span></a>
+    <nav class="nav" aria-label="Main"><a href="./">Home</a><a href="starter-team">Starter Team</a><a href="coming-soon">Coming soon</a></nav>
+  </div>
+</header>
+<main id="main">
+
+<section class="space" aria-labelledby="rb-h">
+  <div class="wrap">
+    <p class="small"><a href="./">Home</a> / Room builder</p>
+    <div class="agent-title"><h1 id="rb-h">Room builder</h1><span class="badge badge-soon">Coming soon</span></div>
+    <p class="lede">Pick a room, then seat the bots you'd like on your crew. The total updates as you go. It's here to help you plan: nothing is bought on this page.</p>
+  </div>
+</section>
+<section class="space rb-space" aria-labelledby="rb-step1">
+  <div class="wrap" id="rb">
+    <h2 id="rb-step1">Step one: pick a room</h2>
+    <div class="rb-rooms" role="group" aria-label="Rooms"><button type="button" class="rb-room" data-room="office" aria-pressed="false">Office</button><button type="button" class="rb-room" data-room="crew" aria-pressed="false">Crew room</button><button type="button" class="rb-room" data-room="window" aria-pressed="false">Window view</button></div>
+    <h2>Step two: add your crew</h2>
+    <p class="muted">Drag a bot into the room, or tap it, or press Enter on it, to give it the next free seat. Each seated bot has a Remove button.</p>
+    <div class="rb-layout">
+      <div>
+        <div class="rb-stage"><img class="rb-scene" src="img/room-office.svg" alt="A simple drawing of a room with a round desk, a bookshelf, a plant and a round window full of stars." width="495" height="540" draggable="false"><div class="rb-station"><img src="img/charging-station.svg" alt="A simple drawing of a navy charging seat with a battery gauge and a lightning bolt." width="286" height="320" loading="lazy" decoding="async"></div></div>
+        <p class="small ai-credit" id="rb-caption" hidden>AI-generated illustration</p>
+      </div>
+      <div class="rb-side">
+        <div class="panel">
+          <h3>Crew</h3>
+          <ul class="rb-pal" aria-label="Bots to add"></ul>
+          <p class="small rb-addon">Marketing Manager and Media Manager are separate add-ons, not part of the Starter Team. Add either one to your room whenever you like.</p>
+          <div class="rb-actions">
+            <button type="button" class="btn btn-secondary rb-preset">Load the Starter Team</button>
+            <button type="button" class="btn btn-secondary rb-clear">Clear the room</button>
+          </div>
+        </div>
+        <div class="panel rb-cs-panel" hidden>
+          <h3>Charging Station <span class="badge badge-example">Demo data</span></h3>
+          <p>Demo only: this shows a bot resting at the charging station in your room.</p><p>AI features need your own Google AI Studio (Gemini API) account, 18+. Google bills you directly for any paid use. On Google's free tier, Google may use and human-review what you send, so don't enter sensitive or personal information.</p>
+          <button type="button" class="btn btn-secondary rb-help-btn" aria-expanded="false" aria-controls="rb-help">When does it recharge?</button>
+          <div class="rb-help" id="rb-help" role="note" tabindex="-1" hidden><p>Demo only: this shows a bot resting at the charging station in your room.</p><p>AI features need your own Google AI Studio (Gemini API) account, 18+. Google bills you directly for any paid use. On Google's free tier, Google may use and human-review what you send, so don't enter sensitive or personal information.</p></div>
+        </div>
+        <div class="panel">
+          <h3>Total</h3>
+          <p class="rb-total">A$39 (AUD) per bot. The Starter Team is A$99 (AUD).</p>
+          <p class="small">Prices are in Australian dollars (AUD). Makerman Services isn't registered for GST, so no GST is added. Nothing is on sale yet.</p>
+          <p class="small au-line"><strong>When checkout opens, it will be available to buyers in Australia only.</strong> If your card or billing address is outside Australia, we cancel the payment hold and you are not charged. Your bank may show a pending amount for a few days until it drops off.</p><label class="small age-tick"><input type="checkbox" name="age18" disabled> I'm 18 or older</label>
+          <button class="btn btn-block" type="button" disabled aria-disabled="true">Coming soon</button>
+          <p class="small age-note"><strong>18+ only.</strong></p>
+          <p class="small ai-line" data-ai-line>AI features need your own Google AI Studio (Gemini API) account, 18+. Google bills you directly for any paid use. On Google's free tier, Google may use and human-review what you send, so don't enter sensitive or personal information.</p>
+        </div>
+      </div>
+    </div>
+    <p class="rb-live visually-hidden" aria-live="polite"></p>
+    <p class="rb-toast" role="status" hidden></p>
+  </div>
+  <script type="application/json" id="rb-data">{"rooms": [{"id": "office", "name": "Office", "src": "img/room-office.svg", "w": 495, "h": 540, "alt": "A simple drawing of a room with a round desk, a bookshelf, a plant and a round window full of stars.", "seats": [{"x": 14, "y": 84}, {"x": 32, "y": 72}, {"x": 50, "y": 62}, {"x": 66, "y": 73}, {"x": 79, "y": 85}]}, {"id": "crew", "name": "Crew room", "src": "img/canva/control-tower.webp", "w": 720, "h": 581, "caption": "AI-generated illustration", "alt": "A calm lounge on a futuristic ship: a white oval table and navy leather chairs in front of a wide curved window looking out over a planet and stars.", "seats": [{"x": 27, "y": 58}, {"x": 68, "y": 58}, {"x": 80, "y": 82}, {"x": 19, "y": 82}, {"x": 47, "y": 90}]}, {"id": "window", "name": "Window view", "src": "img/room-window.svg", "w": 720, "h": 624, "alt": "A simple drawing of a big round window full of stars and a ringed planet, with a long bench in front.", "seats": [{"x": 11, "y": 90}, {"x": 28, "y": 95}, {"x": 45, "y": 99}, {"x": 62, "y": 96}, {"x": 78, "y": 92}]}], "bots": [{"id": "supervisor", "name": "Supervisor", "cc": false, "mouth": [50, 40], "src": "img/bot-supervisor.svg", "w": 240, "h": 360}, {"id": "cc", "name": "Compliance Checker", "cc": true, "mouth": [50, 60]}, {"id": "content", "name": "Content Manager", "cc": false, "mouth": [57, 39], "src": "img/bot-content.svg", "w": 240, "h": 360}, {"id": "posting", "name": "Posting Manager", "cc": false, "mouth": [57, 40], "src": "img/bot-posting.svg", "w": 240, "h": 360}, {"id": "marketing", "name": "Marketing Manager", "cc": false, "mouth": [60, 38], "src": "img/bot-marketing.svg", "w": 240, "h": 360}, {"id": "media", "name": "Media Manager", "cc": false, "mouth": [57, 34], "src": "img/bot-media.svg", "w": 240, "h": 360}], "preset": ["supervisor", "cc", "content", "posting"], "station": {"chip": "Out of usage, resting", "toast": "Recharged. Back at the table."}}</script>
+  <script>/* Room builder (internal preview). Plain JS, no backend, nothing stored or sent. */
+(function () {
+  var root = document.getElementById("rb");
+  if (!root) return;
+  var DATA = JSON.parse(document.getElementById("rb-data").textContent);
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var stage = root.querySelector(".rb-stage"), scene = root.querySelector(".rb-scene"), live = root.querySelector(".rb-live");
+  var room = DATA.rooms[0], seats = [];          // seats[i] = placed element or null
+  var ENTRY = { x: 4, y: 96 };
+  var CS = DATA.station, parked = [];             // parked = wraps resting at the charging station (demo only)
+  var stationPanel = root.querySelector(".rb-cs-panel"), toast = root.querySelector(".rb-toast"), toastT;
+  function stationPos() { return { x: 93, y: 94 }; }   // one bot at a time
+  function showToast(t) { toast.textContent = t; toast.hidden = false; clearTimeout(toastT); toastT = setTimeout(function () { toast.hidden = true; }, 2600); }
+  function refreshStation() {
+    stationPanel.hidden = parked.length === 0;
+    parked.forEach(function (w) { if (!w.classList.contains("is-moving")) pos(w, stationPos(w)); });
+  }
+  function setParked(wrap, on) {
+    var tg = wrap.querySelector(".rb-usage"), b = bot(wrap.dataset.bot), seat = room.seats[seats.indexOf(wrap)];
+    tg.setAttribute("aria-pressed", String(on));
+    wrap.classList.toggle("is-parked", on);
+    if (on) {
+      if (parked.length && parked[0] !== wrap) setParked(parked[0], false);   // only one bot out of usage at a time
+      parked.push(wrap); var to = stationPos(wrap);
+      walk(wrap, [seat, { x: (seat.x + to.x) / 2, y: Math.max(seat.y, to.y) - 4 }, to]);
+      say(b.name + " walked to the Charging Station. " + CS.chip + ".");
+    } else {
+      var from = stationPos(wrap); parked.splice(parked.indexOf(wrap), 1);
+      walk(wrap, [from, { x: (seat.x + from.x) / 2, y: Math.max(seat.y, from.y) - 4 }, seat]);
+      showToast(CS.toast); say(b.name + ". " + CS.toast);
+    }
+    refreshStation();
+  }
+
+  function say(t) { live.textContent = ""; setTimeout(function () { live.textContent = t; }, 30); }
+  function bot(id) { for (var i = 0; i < DATA.bots.length; i++) if (DATA.bots[i].id === id) return DATA.bots[i]; }
+  function pos(el, p) {
+    el.style.left = p.x + "%"; el.style.top = p.y + "%";
+    // Bots further back sit on top, so a bot's Remove/toggle row (under its feet) is never covered by the bot in front.
+    if (el.classList && el.classList.contains("rb-placed")) el.style.zIndex = el.classList.contains("is-parked") ? "90" : String(2 + Math.round(100 - p.y));
+  }
+
+  // ---- figure markup (shared by palette, placed bots and the drag ghost)
+  function figure(b) {
+    var f = document.createElement("span");
+    f.className = "rb-fig" + (b.cc ? " rb-fig-cc" : "");
+    f.style.setProperty("--mx", b.mouth[0] + "%"); f.style.setProperty("--my", b.mouth[1] + "%");
+    if (b.cc) {
+      f.innerHTML = '<span class="rb-body"><span class="tile plain" aria-hidden="true"><span>CC</span></span></span>';
+    } else {
+      f.innerHTML = '<span class="rb-body"><img class="rb-base" src="' + b.src + '" alt="" width="' + b.w + '" height="' + b.h + '" draggable="false">' +
+        '<img class="rb-arm" src="' + b.src + '" alt="" draggable="false">' +
+        '<img class="rb-head" src="' + b.src + '" alt="" draggable="false">' +
+        '<span class="rb-mouth"></span></span>';
+    }
+    var bub = document.createElement("span"); bub.className = "rb-bubble"; bub.setAttribute("aria-hidden", "true"); bub.textContent = b.name;
+    f.appendChild(bub);
+    return f;
+  }
+  function talk(el, on) { el.classList.toggle("is-talking", on); }
+  function wireTalk(el) {
+    el.addEventListener("mouseenter", function () { talk(el, true); });
+    el.addEventListener("mouseleave", function () { if (document.activeElement !== el) talk(el, false); });
+    el.addEventListener("focus", function () { talk(el, true); });
+    el.addEventListener("blur", function () { talk(el, false); });
+  }
+
+  // ---- rooms
+  function setRoom(id) {
+    room = DATA.rooms.filter(function (r) { return r.id === id; })[0];
+    scene.src = room.src; scene.alt = room.alt; scene.width = room.w; scene.height = room.h;
+    var cap = root.querySelector("#rb-caption"); if (cap) { cap.hidden = !room.caption; if (room.caption) cap.textContent = room.caption; }
+    stage.style.aspectRatio = room.w + " / " + room.h; stage.style.maxWidth = Math.round(room.w / room.h * 520) + "px";
+    root.querySelectorAll(".rb-room").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.room === id)); });
+    stage.querySelectorAll(".rb-spot").forEach(function (s, i) { pos(s, room.seats[i]); });
+    seats.forEach(function (el, i) { if (el) { el.classList.remove("is-moving"); pos(el, parked.indexOf(el) > -1 ? stationPos(el) : room.seats[i]); } });
+    say(room.name + " selected.");
+  }
+
+  // ---- placing
+  function nextFree(from) {
+    var n = room.seats.length;
+    for (var k = 0; k < n; k++) { var i = (from + k) % n; if (!seats[i]) return i; }
+    return -1;
+  }
+  function nearestSeat(p) {
+    var best = 0, d = 1e9;
+    room.seats.forEach(function (s, i) { var dd = (s.x - p.x) * (s.x - p.x) + (s.y - p.y) * (s.y - p.y); if (dd < d) { d = dd; best = i; } });
+    return best;
+  }
+  function sit(el) {
+    el.classList.remove("is-moving", "is-running");
+    if (reduce) return;
+    el.classList.remove("is-sitting"); void el.offsetWidth; el.classList.add("is-sitting");
+  }
+  function walk(el, path) {             // slide seat to seat around the table, then sit
+    if (reduce || path.length < 2) { pos(el, path[path.length - 1]); sit(el); return; }
+    el.classList.add("is-moving");
+    var i = 0;
+    (function step() {
+      pos(el, path[i]);
+      if (++i < path.length) setTimeout(step, i === 1 ? 30 : 260); else setTimeout(function () { sit(el); }, 300);
+    })();
+  }
+  function ringPath(fromIdx, toIdx) {   // seats visited going round from fromIdx to toIdx
+    var out = [], n = room.seats.length, i = fromIdx;
+    if (fromIdx < 0) return [room.seats[toIdx]];
+    while (true) { out.push(room.seats[i]); if (i === toIdx) break; i = (i + 1) % n; }
+    return out;
+  }
+  function place(id, dropPt) {
+    var start = dropPt ? nearestSeat(dropPt) : 0;
+    var idx = nextFree(start);
+    if (idx < 0) { say("All seats are taken. Remove a bot first."); return null; }
+    var b = bot(id);
+    var wrap = document.createElement("div"); wrap.className = "rb-placed";
+    var btn = document.createElement("button"); btn.type = "button"; btn.className = "rb-bot";
+    btn.setAttribute("aria-label", b.name + ", seated. Press Delete to remove.");
+    btn.appendChild(figure(b));
+    var rm = document.createElement("button"); rm.type = "button"; rm.className = "rb-remove";
+    rm.setAttribute("aria-label", "Remove " + b.name); rm.textContent = "Remove";
+    var ctl = document.createElement("span"); ctl.className = "rb-ctl";
+    var tg = document.createElement("button"); tg.type = "button"; tg.className = "rb-usage"; tg.setAttribute("aria-pressed", "false");
+    tg.setAttribute("aria-label", "Mark " + b.name + " as out of usage (demo)"); tg.innerHTML = '<span class="rb-batt" aria-hidden="true"></span>';
+    var chip = document.createElement("span"); chip.className = "rb-chip"; chip.textContent = CS.chip;
+    ctl.appendChild(rm); ctl.appendChild(tg);
+    wrap.appendChild(btn); wrap.appendChild(chip); wrap.appendChild(ctl);   // chip floats above the resting bot's head
+    tg.addEventListener("click", function () { setParked(wrap, tg.getAttribute("aria-pressed") !== "true"); });
+    wrap.dataset.bot = id;
+    stage.appendChild(wrap);
+    seats[idx] = wrap;
+    wireTalk(btn);
+    btn.addEventListener("click", function () { talk(btn, true); });
+    btn.addEventListener("keydown", function (e) { if (e.key === "Delete" || e.key === "Backspace") { e.preventDefault(); remove(wrap); } });
+    rm.addEventListener("click", function () { remove(wrap); });
+    btn.addEventListener("pointerdown", function (e) { if (!wrap.classList.contains("is-parked")) startDrag(e, id, wrap); });
+    var startPt = dropPt || ENTRY;
+    pos(wrap, startPt);
+    var path = dropPt ? [startPt].concat(ringPath(start, idx)) : [ENTRY].concat(ringPath(0, idx));
+    requestAnimationFrame(function () { walk(wrap, path); });
+    say(b.name + " added to the " + room.name + ".");
+    return wrap;
+  }
+  function remove(wrap) {
+    var i = seats.indexOf(wrap); if (i > -1) seats[i] = null;
+    var pk = parked.indexOf(wrap); if (pk > -1) { parked.splice(pk, 1); refreshStation(); }
+    var name = bot(wrap.dataset.bot).name; wrap.remove();
+    say(name + " removed."); root.querySelector('.rb-pal [data-bot="' + wrap.dataset.bot + '"]').focus();
+  }
+  function clearAll() { seats.forEach(function (w) { if (w) w.remove(); }); seats = room.seats.map(function () { return null; }); parked = []; refreshStation(); }
+
+  // ---- drag (pointer events: mouse, pen and touch)
+  var drag = null;
+  function startDrag(e, id, fromWrap) {
+    if (e.button !== undefined && e.button !== 0) return;
+    drag = { id: id, from: fromWrap, x0: e.clientX, y0: e.clientY, ghost: null, el: e.currentTarget };
+    e.currentTarget.setPointerCapture && e.currentTarget.setPointerCapture(e.pointerId);
+  }
+  document.addEventListener("pointermove", function (e) {
+    if (!drag) return;
+    if (!drag.ghost) {
+      if (Math.abs(e.clientX - drag.x0) + Math.abs(e.clientY - drag.y0) < 8) return;
+      drag.ghost = document.createElement("div"); drag.ghost.className = "rb-ghost" + (reduce ? "" : " is-running");
+      drag.ghost.appendChild(figure(bot(drag.id))); document.body.appendChild(drag.ghost);
+      if (drag.from) drag.from.style.opacity = ".35";
+    }
+    drag.ghost.style.left = e.clientX + "px"; drag.ghost.style.top = e.clientY + "px";
+    e.preventDefault();
+  }, { passive: false });
+  document.addEventListener("pointerup", function (e) {
+    if (!drag) return;
+    var d = drag; drag = null;
+    if (!d.ghost) {                                   // a tap or click
+      if (!d.from) place(d.id);
+      return;
+    }
+    d.ghost.remove();
+    var r = stage.getBoundingClientRect();
+    var inside = e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
+    if (d.from) {
+      d.from.style.opacity = "";
+      if (!inside) { sit(d.from); return; }
+      var i = seats.indexOf(d.from); seats[i] = null;
+      var pt = { x: (e.clientX - r.left) / r.width * 100, y: (e.clientY - r.top) / r.height * 100 };
+      var near = nearestSeat(pt), idx = nextFree(near);
+      seats[idx] = d.from; pos(d.from, pt);
+      requestAnimationFrame(function () { walk(d.from, [pt].concat(ringPath(near, idx))); });
+      return;
+    }
+    if (inside) place(d.id, { x: (e.clientX - r.left) / r.width * 100, y: (e.clientY - r.top) / r.height * 100 });
+  });
+  document.addEventListener("pointercancel", function () { if (drag && drag.ghost) drag.ghost.remove(); if (drag && drag.from) drag.from.style.opacity = ""; drag = null; });
+
+  // ---- palette
+  var pal = root.querySelector(".rb-pal");
+  DATA.bots.forEach(function (b) {
+    var li = document.createElement("li");
+    var btn = document.createElement("button"); btn.type = "button"; btn.className = "rb-bot rb-pal-bot"; btn.dataset.bot = b.id;
+    btn.setAttribute("aria-label", "Add " + b.name);
+    var art = document.createElement("span"); art.className = "rb-art"; art.appendChild(figure(b)); btn.appendChild(art);
+    var lab = document.createElement("span"); lab.className = "rb-label"; lab.textContent = b.name; btn.appendChild(lab);
+    btn.addEventListener("pointerdown", function (e) { startDrag(e, b.id, null); });
+    btn.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); place(b.id); } });
+    wireTalk(btn);
+    li.appendChild(btn); pal.appendChild(li);
+  });
+  root.querySelectorAll(".rb-room").forEach(function (b) { b.addEventListener("click", function () { setRoom(b.dataset.room); }); });
+  root.querySelector(".rb-preset").addEventListener("click", function () {
+    clearAll(); DATA.preset.forEach(function (id, k) { setTimeout(function () { place(id); }, reduce ? 0 : k * 420); });
+    say("Starter Team loaded.");
+  });
+  var helpBtn = root.querySelector(".rb-help-btn"), help = root.querySelector(".rb-help");
+  helpBtn.addEventListener("click", function () { var open = help.hidden; help.hidden = !open; helpBtn.setAttribute("aria-expanded", String(open)); if (open) help.focus(); });
+  root.querySelector(".rb-clear").addEventListener("click", function () { clearAll(); say("Room cleared."); });
+  // seat spots
+  DATA.rooms[0].seats.forEach(function () { var s = document.createElement("span"); s.className = "rb-spot"; s.setAttribute("aria-hidden", "true"); stage.appendChild(s); });
+  seats = room.seats.map(function () { return null; });
+  setRoom(room.id);
+  if (location.hash === "#starter") root.querySelector(".rb-preset").click();
+})();
+</script>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">RFDM Marketplace</div>
+        <p class="small" style="color:var(--footer-muted);margin-top:var(--s2)">Blank copies of our crew's roles, from Makerman Services. Everything here is coming soon, and nothing is on sale yet.</p>
+        <p class="small" style="margin:0"><a href="mailto:makermanservices@gmail.com">makermanservices@gmail.com</a></p>
+      </div>
+      <nav aria-label="Legal">
+        <ul class="footer-links">
+          <li><a href="terms">Terms</a></li>
+          <li><a href="licence">Licence (business use)</a></li>
+          <li><a href="privacy">Privacy</a></li>
+          <li><a href="refunds">Refunds (14 days) and your rights</a></li>
+          <li><a href="image-credits">Image credits</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-fine">
+      <p>14-day change-of-mind refunds. Our goods and services also come with guarantees that cannot be excluded under the Australian Consumer Law. See <a href="refunds">Refunds and your rights</a>.</p>
+      <p>&copy; Makerman Services, ABN 22 791 780 670. Contact: <a href="mailto:makermanservices@gmail.com">makermanservices@gmail.com</a>.</p>
+      <p class="credit">Made by Makerman Services · ABN 22 791 780 670</p>
+      <p class="small age-note">RFDM Marketplace is 18+ only.</p>
+      <p class="small ai-credit">Some images made with Canva AI.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
